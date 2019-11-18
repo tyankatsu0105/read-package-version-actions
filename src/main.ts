@@ -8,6 +8,8 @@ async function run() {
     core.debug(`Load package.json at ${path}`);
 
     const result = getPackageVersion(path);
+
+    core.debug(`Version is ${result}`);
     core.setOutput('version', result);
   } catch (error) {
     core.setFailed(error.message);
