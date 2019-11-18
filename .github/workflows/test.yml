@@ -21,7 +21,7 @@ jobs:
     - name: Local action test
       uses: ./
       with:
-        path: "package.json"
+        path: "./"
       id: version
 
     - name: Get version
