@@ -29,9 +29,9 @@ jobs:
 
     - name: Local action test
       uses: ./
-      id: version
       with:
-        path: 'package.json'
+        path: "package.json"
+      id: version
 
     - name: Get version
       run: echo "Version is  ${{ steps.versionn.outputs.version }}"
