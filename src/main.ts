@@ -9,7 +9,7 @@ async function run() {
 
     const result = getPackageVersion(path);
 
-    core.debug(`set output: ${version}: ${result}`);
+    core.debug(`set output: version: ${result}`);
     core.setOutput('version', result);
   } catch (error) {
     core.setFailed(error.message);
