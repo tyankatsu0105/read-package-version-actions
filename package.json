@@ -8,8 +8,9 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.ts",
     "commit": "git-cz",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged && npm run test",
     "build": "tsc",
+    "build:watch": "tsc -w",
     "test": "jest"
   },
   "repository": {

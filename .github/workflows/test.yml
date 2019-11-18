@@ -12,9 +12,22 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - run: npm ci
-    - run: npm run build
-    - run: npm test
+    - uses: actions/cache@v1
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
+    - name: Install dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: npm ci
+
+    - name: Build
+      run: npm run build
+
+    - name: Unit Test
+      run: npm test
+
     - uses: ./
-      with: 
-        milliseconds: 1000
