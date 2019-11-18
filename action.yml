@@ -1,10 +1,12 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Read package.json version'
+description: 'Output version numbers with package.json'
 inputs:
-  myInput:              # change this
-    description: 'input description here'
-    default: 'default value if applicable'
+  path:
+    description: 'Path of package.json'
+    default: './package.json'
+outputs:
+  version:
+    description: "Version of package"
 runs:
   using: 'node12'
   main: 'lib/main.js'
