@@ -20,8 +20,6 @@ jobs:
 
     - name: Local action test
       uses: ./
-      with:
-        path: "./"
       id: version
 
     - name: Get version
