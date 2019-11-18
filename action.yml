@@ -4,7 +4,7 @@ inputs:
   path:
     description: 'Path of package.json'
     required: true
-    default: "package.json"
+    default: "./"
 outputs:
   version:
     description: "Version of package"
