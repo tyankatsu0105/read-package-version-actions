@@ -3,7 +3,7 @@ import { getPackageVersion } from './getPackageVersion';
 
 async function run() {
   try {
-    const path = core.getInput('path');
+    const path = await core.getInput('path');
 
     core.debug(`Load package.json at ${path}`);
 
