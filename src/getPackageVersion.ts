@@ -1,12 +1,11 @@
 import fs from 'fs';
-import { join } from 'path';
 
 /**
  * Find package.json with path.
  * @param path
  */
 export const findPackageJson = (path: string): string => {
-  return fs.readFileSync(join(path, 'package.json')).toString();
+  return fs.readFileSync(path).toString();
 };
 
 /**
