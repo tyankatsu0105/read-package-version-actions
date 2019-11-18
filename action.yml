@@ -3,6 +3,7 @@ description: 'Output version numbers with package.json'
 inputs:
   path:
     description: 'Path of package.json'
+    required: true
     default: 'package.json'
 outputs:
   version:
