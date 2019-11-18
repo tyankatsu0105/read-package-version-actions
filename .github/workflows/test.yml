@@ -28,5 +28,3 @@ jobs:
       run: npm test
 
     - uses: ./
-      with:
-        path: "./"

@@ -9,7 +9,7 @@ async function run() {
 
     const result = getPackageVersion(path);
 
-    core.debug(`Version is ${result}`);
+    core.debug(`set output: ${version}: ${result}`);
     core.setOutput('version', result);
   } catch (error) {
     core.setFailed(error.message);
@@ -17,22 +17,3 @@ async function run() {
 }
 
 run();
-
-// import * as core from '@actions/core';
-
-// async function run() {
-//   try {
-//     const ms = core.getInput('milliseconds');
-//     console.log(`Waiting ${ms} milliseconds ...`);
-
-//     core.debug(new Date().toTimeString());
-//     await wait(parseInt(ms, 10));
-//     core.debug(new Date().toTimeString());
-
-//     core.setOutput('time', new Date().toTimeString());
-//   } catch (error) {
-//     core.setFailed(error.message);
-//   }
-// }
-
-// run();
