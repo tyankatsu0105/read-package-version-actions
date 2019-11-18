@@ -1,4 +1,4 @@
-name: "Test typescript-action"
+name: "Test"
 on:
   pull_request:
   push:
@@ -28,3 +28,5 @@ jobs:
       run: npm test
 
     - uses: ./
+      with:
+        path: "./"
