@@ -27,4 +27,11 @@ jobs:
     - name: Unit Test
       run: npm test
 
-    - uses: ./
+    - name: Local action test
+      uses: ./
+      id: version
+      with:
+        path: 'package.json'
+
+    - name: Get version
+      run: echo "Version is  ${{ steps.versionn.outputs.version }}"
