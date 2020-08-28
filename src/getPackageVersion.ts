@@ -13,7 +13,7 @@ export const findPackageJson = (path: string): string => {
  * Get version field within package.json
  * @param path
  */
-export const getPackageVersion = (path: string): string => {
+export const getPackageVersion = (path: string): string | undefined => {
   const packageJson = findPackageJson(path);
 
   return JSON.parse(packageJson).version;
